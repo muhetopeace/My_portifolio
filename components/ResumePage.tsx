@@ -1,5 +1,6 @@
 import React from 'react'
 import { Briefcase, Award } from 'lucide-react'
+import { title } from 'process'
 
 export default function ResumePage() {
   const skills = [
@@ -12,23 +13,19 @@ export default function ResumePage() {
   ]
 
   const experience = [
+   
+   
     {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Leading frontend development projects using React, Next.js, and TypeScript. Mentoring junior developers and implementing best practices.'
+      title: 'SheCanCode Frontend trainee',
+      company: 'Igire Rwanda Organization',
+      period: '2025 - Present',
+      description: 'Learning and working on frontend development projects using React, Next.js, and TypeScript. implementing best practices.'
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Digital Agency',
-      period: '2021 - 2022',
-      description: 'Developed full-stack web applications using MERN stack. Collaborated with designers and clients to deliver high-quality solutions.'
-    },
-    {
-      title: 'Junior Web Developer',
-      company: 'StartUp Co.',
-      period: '2020 - 2021',
-      description: 'Built responsive websites and maintained existing applications. Learned modern web development practices and tools.'
+        title:'Network operation eengineer',
+        campany: 'KT Rwanda Network',
+        period: 'march,2025 - may,2025',
+        description: 'KT Rwanda Networks operates Rwanda’s national 4G LTE and fiber-optic infrastructure. Its networking operations involve monitoring and maintaining the nationwide LTE and fiber backbone, ensuring high-quality network performance, reliability, and uptime. The team handles network configuration, troubleshooting, upgrades, and optimization to provide fast, secure, and stable connectivity to mobile operators, ISPs, government systems, and businesses across Rwanda.'
     }
   ]
 
@@ -36,7 +33,7 @@ export default function ResumePage() {
     {
       degree: 'Bachelor of Science in Computer Science',
       school: 'University of Rwanda',
-      period: '2017 - 2021',
+      period: '2022- Present',
       description: 'Focused on software engineering, algorithms, and web development.'
     }
   ]
