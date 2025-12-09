@@ -21,6 +21,24 @@ export default function PortfolioPage() {
     return () => clearInterval(interval)
   }, [isPaused])
 
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout
+    
+    const handleUserScroll = () => {
+      setIsPaused(true)
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(() => {
+        setIsPaused(false)
+      }, 3000)
+    }
+
+    window.addEventListener('scroll', handleUserScroll)
+    return () => {
+      window.removeEventListener('scroll', handleUserScroll)
+      clearTimeout(scrollTimeout)
+    }
+  }, [])
+
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -88,6 +106,7 @@ export default function PortfolioPage() {
           className="overflow-hidden"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
+          onWheel={() => setIsPaused(true)}
         >
           <div 
             ref={scrollRef}
