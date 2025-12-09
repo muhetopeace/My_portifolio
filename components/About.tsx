@@ -3,10 +3,9 @@ import { Download, Award, Users, Clock, Star } from 'lucide-react'
 
 export default function AboutPage() {
   const stats = [
-    { icon: Award, value: '50+', label: 'Projects Completed' },
-    { icon: Users, value: '30+', label: 'Happy Clients' },
+    { icon: Award, value: '5+', label: 'Projects Completed' },
     { icon: Clock, value: '3+', label: 'Years Experience' },
-    { icon: Star, value: '5.0', label: 'Client Rating' }
+    { icon: Star, value: '8+', label: 'Technologies' }
   ]
 
   return (
@@ -46,12 +45,12 @@ export default function AboutPage() {
               <div className="flex gap-4 items-center">
                 <span className="text-slate-400 w-32">Email:</span>
                 <a href="mailto:peace@example.com" className="font-semibold hover:text-yellow-500 transition">
-                  peace@gmail.com
+                  muhetobpeace@gmail.com
                 </a>
               </div>
               <div className="flex gap-4 items-center">
                 <span className="text-slate-400 w-32">Phone:</span>
-                <span className="font-semibold">+250 123 456 789</span>
+                <span className="font-semibold">+250 790271423 </span>
               </div>
               <div className="flex gap-4 items-center">
                 <span className="text-slate-400 w-32">From:</span>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Github, Linkedin, Instagram, ChevronRight } from 'lucide-react'
+import { Github, Linkedin, Mail, ChevronRight } from 'lucide-react'
 
 interface HomePageProps {
   setActivePage: (page: string) => void
@@ -71,12 +71,10 @@ export default function HomePage({ setActivePage }: HomePageProps) {
             <Linkedin className="w-7 h-7" />
           </a>
           <a 
-            href="https://instagram.com/pea__.__ce" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:muhetobpeace@gmail.com" 
             className="hover:text-yellow-500 transition transform hover:scale-110"
           >
-            <Instagram className="w-7 h-7" />
+            <Mail className="w-7 h-7" />
           </a>
         </div>
       </div>

@@ -1,14 +1,33 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef, useState } from 'react'
 import { ExternalLink, Github } from 'lucide-react'
 
 export default function PortfolioPage() {
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (isPaused) return
+
+    const interval = setInterval(() => {
+      setScrollPosition(prev => {
+        const maxScroll = scrollRef.current ? scrollRef.current.scrollWidth / 2 : 0
+        return prev >= maxScroll ? 0 : prev + 1
+      })
+    }, 30)
+
+    return () => clearInterval(interval)
+  }, [isPaused])
+
   const projects = [
     {
       title: 'E-Commerce Platform',
       description: 'A full-featured e-commerce platform built with Next.js, TypeScript, and Tailwind CSS. Features include product management, shopping cart, and secure checkout.',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe'],
-      github: 'https://github.com/peacebamurange',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      github: 'https://https://github.com/muhetopeace',
       live: '#'
     },
     {
@@ -16,7 +35,7 @@ export default function PortfolioPage() {
       description: 'A modern task management application with drag-and-drop functionality, real-time updates, and team collaboration features.',
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
       tags: ['React', 'TypeScript', 'Firebase'],
-      github: 'https://github.com/peacebamurange',
+      github: 'https://https://github.com/muhetopeace',
       live: '#'
     },
     {
@@ -24,7 +43,7 @@ export default function PortfolioPage() {
       description: 'A responsive portfolio website showcasing creative work with smooth animations and modern design patterns.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
       tags: ['Next.js', 'React', 'Tailwind CSS'],
-      github: 'https://github.com/peacebamurange',
+      github: 'https://https://github.com/muhetopeace',
       live: '#'
     },
     {
@@ -32,11 +51,11 @@ export default function PortfolioPage() {
       description: 'A real-time weather dashboard that provides detailed forecasts and weather data visualization for multiple locations.',
       image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
       tags: ['React', 'TypeScript', 'OpenWeather API'],
-      github: 'https://github.com/peacebamurange',
+      github: 'https://https://github.com/muhetopeace',
       live: '#'
     },
     {
-      title: 'Blog Platform',
+      title: 'To do app Platform',
       description: 'A modern blogging platform with markdown support, comment system, and user authentication.',
       image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop',
       tags: ['Next.js', 'TypeScript', 'MongoDB'],
@@ -57,7 +76,7 @@ export default function PortfolioPage() {
     <div className="min-h-screen pt-24 pb-20 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-yellow-500 text-sm font-semibold tracking-wider mb-2">PORTFOLIO</h2>
+          <h2 className="text-yellow-500 text-sm font-semibold tracking-wider mb-2">Work</h2>
           <div className="w-16 h-1 bg-yellow-500 mx-auto mb-4"></div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">My Recent Work</h1>
           <p className="text-slate-400 max-w-2xl mx-auto">
@@ -65,12 +84,21 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="bg-slate-800 rounded-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group shadow-lg hover:shadow-2xl border border-slate-700"
-            >
+        <div 
+          className="overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div 
+            ref={scrollRef}
+            className="flex gap-6 md:gap-8 transition-transform duration-1000 ease-linear"
+            style={{ transform: `translateX(-${scrollPosition}px)` }}
+          >
+            {[...projects, ...projects].map((project, index) => (
+              <div 
+                key={index} 
+                className="bg-slate-800 rounded-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group shadow-lg hover:shadow-2xl border border-slate-700 flex-shrink-0 w-80"
+              >
               <div className="relative overflow-hidden h-48">
                 <img 
                   src={project.image} 
@@ -111,8 +139,9 @@ export default function PortfolioPage() {
                   </a>
                 </div>
               </div>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

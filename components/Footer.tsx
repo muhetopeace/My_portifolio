@@ -1,5 +1,5 @@
 import React from 'react'
-import { Github, Linkedin, Instagram, Heart } from 'lucide-react'
+import { Github, Linkedin, Mail, Heart } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -32,12 +32,10 @@ export default function Footer() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="https://instagram.com/pea__.__ce" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:muhetobpeace@gmail.com" 
               className="text-slate-400 hover:text-yellow-500 transition transform hover:scale-110"
             >
-              <Instagram className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
             </a>
           </div>
         </div>

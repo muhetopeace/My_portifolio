@@ -59,7 +59,7 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
               ))}
               <a href="tel:+250123456789" className="flex items-center gap-2 text-sm hover:text-yellow-500 transition">
                 <Phone className="w-4 h-4" />
-                +250 123 456 789
+                +250790271423
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -53,8 +53,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <a href="mailto:peace@example.com" className="text-slate-400 hover:text-yellow-500 transition">
-                    peace@example.com
+                  <a href="mailto:muhetobpeace@gmail.com" className="text-slate-400 hover:text-yellow-500 transition">
+                    muhetobpeace@gmail.com
                   </a>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
                   <a href="tel:+250123456789" className="text-slate-400 hover:text-yellow-500 transition">
-                    +250 123 456 789
+                    +250 790271423
                   </a>
                 </div>
               </div>
@@ -100,12 +100,10 @@ export default function ContactPage() {
                 <Linkedin className="w-5 h-5 group-hover:text-slate-900" />
               </a>
               <a 
-                href="https://instagram.com/pea__.__ce" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:muhetobpeace@gmail.com" 
                 className="w-12 h-12 bg-slate-800 hover:bg-yellow-500 rounded-full flex items-center justify-center transition group"
               >
-                <Instagram className="w-5 h-5 group-hover:text-slate-900" />
+                <Mail className="w-5 h-5 group-hover:text-slate-900" />
               </a>
             </div>
           </div>
