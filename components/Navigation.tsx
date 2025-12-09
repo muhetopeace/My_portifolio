@@ -31,16 +31,16 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-slate-900/80'
-    } border-b border-slate-800`}>
+      scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-white/90'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div onClick={() => setActivePage('home')} className="flex items-center gap-2 cursor-pointer">
-              <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform">
-                <span className="text-slate-900 font-bold text-xl">P</span>
+              <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform">
+                <span className="text-white font-bold text-xl">P</span>
               </div>
-              <span className="font-bold text-xl hidden sm:block">Peace Bamurange</span>
+              <span className="font-bold text-xl hidden sm:block text-gray-800">Peace Bamurange</span>
             </div>
           </div>
 
@@ -50,14 +50,14 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
                 <button
                   key={item.page}
                   onClick={() => setActivePage(item.page)}
-                  className={`hover:text-yellow-500 transition text-sm ${
-                    activePage === item.page ? 'text-yellow-500' : ''
+                  className={`hover:text-gray-800 transition text-sm font-medium ${
+                    activePage === item.page ? 'text-gray-800 font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {item.name}
                 </button>
               ))}
-              <a href="tel:+250123456789" className="flex items-center gap-2 text-sm hover:text-yellow-500 transition">
+              <a href="tel:+250790271423" className="flex items-center gap-2 text-sm hover:text-gray-800 transition text-gray-600">
                 <Phone className="w-4 h-4" />
                 +250790271423
               </a>
@@ -65,7 +65,7 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-800">
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -73,7 +73,7 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-slate-800 border-t border-slate-700">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {menuItems.map((item) => (
               <button
@@ -82,8 +82,8 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
                   setActivePage(item.page)
                   setMobileMenuOpen(false)
                 }}
-                className={`block w-full text-left px-3 py-2 hover:bg-slate-700 rounded transition ${
-                  activePage === item.page ? 'text-yellow-500 bg-slate-700' : ''
+                className={`block w-full text-left px-3 py-2 hover:bg-gray-100 rounded transition ${
+                  activePage === item.page ? 'text-gray-800 bg-gray-100 font-semibold' : 'text-gray-600'
                 }`}
               >
                 {item.name}
