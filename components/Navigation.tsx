@@ -50,8 +50,8 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
                 <button
                   key={item.page}
                   onClick={() => setActivePage(item.page)}
-                  className={`hover:text-gray-800 transition text-sm font-medium ${
-                    activePage === item.page ? 'text-gray-800 font-semibold' : 'text-gray-600'
+                  className={`hover:text-yellow-500 transition text-sm font-medium ${
+                    activePage === item.page ? 'text-yellow-500 font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {item.name}
@@ -82,8 +82,8 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
                   setActivePage(item.page)
                   setMobileMenuOpen(false)
                 }}
-                className={`block w-full text-left px-3 py-2 hover:bg-gray-100 rounded transition ${
-                  activePage === item.page ? 'text-gray-800 bg-gray-100 font-semibold' : 'text-gray-600'
+                className={`block w-full text-left px-3 py-2 hover:bg-yellow-50 rounded transition ${
+                  activePage === item.page ? 'text-yellow-500 bg-yellow-50 font-semibold' : 'text-gray-600'
                 }`}
               >
                 {item.name}
