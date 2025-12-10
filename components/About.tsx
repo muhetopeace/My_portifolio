@@ -67,9 +67,14 @@ export default function AboutPage() {
 
           <div className="relative">
             <div className="aspect-[3/4] bg-slate-800 rounded-lg overflow-hidden shadow-2xl">
-              <div className="flex items-center justify-center h-full bg-gradient-to-br from-yellow-400 to-yellow-600">
-                <span className="text-slate-900 font-bold text-6xl">PB</span>
-              </div>
+            <Image 
+  src="/profile.jpeg" 
+  alt="Peace Bamurange"
+  width={500}
+  height={500}
+  className="object-cover w-full h-full"
+/>
+
             </div>
           </div>
         </div>

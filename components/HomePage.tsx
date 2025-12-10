@@ -21,9 +21,16 @@ export default function HomePage({ setActivePage }: HomePageProps) {
       
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="mb-8">
-          <div className="w-48 h-48 rounded-full mx-auto border-4 border-yellow-500 shadow-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
-            <span className="text-slate-900 font-bold text-4xl">PB</span>
-          </div>
+          <div className="w-48 h-48 rounded-full mx-auto border-4 border-yellow-500 shadow-2xl overflow-hidden">
+  <Image 
+    src="/mujiji.jpg" 
+    alt="Peace Bamurange"
+    width={300}
+    height={300}
+    className="object-cover w-full h-full"
+  />
+</div>
+
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
           Hi, I am <span className="text-yellow-500">Peace Bamurange</span>
