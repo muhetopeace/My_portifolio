@@ -18,12 +18,24 @@ export default function Home() {
     <main className="min-h-screen bg-slate-900 text-white">
       <Navigation activePage={activePage} setActivePage={setActivePage} />
       
-      {activePage === 'home' && <HomePage setActivePage={setActivePage} />}
-      {activePage === 'about' && <AboutPage />}
-      {activePage === 'services' && <ServicesPage />}
-      {activePage === 'portfolio' && <PortfolioPage />}
-      {activePage === 'resume' && <ResumePage />}
-      {activePage === 'contact' && <ContactPage />}
+      <section id="home">
+        <HomePage setActivePage={setActivePage} />
+      </section>
+      <section id="about">
+        <AboutPage />
+      </section>
+      <section id="services">
+        <ServicesPage />
+      </section>
+      <section id="portfolio">
+        <PortfolioPage />
+      </section>
+      <section id="resume">
+        <ResumePage />
+      </section>
+      <section id="contact">
+        <ContactPage />
+      </section>
       
       <Footer />
       <FloatingButtons />

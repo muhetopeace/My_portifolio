@@ -31,7 +31,7 @@ export default function ResumePage() {
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
+      degree: 'Bachelor of ICT in Computer Science',
       school: 'University of Rwanda',
       period: '2022- Present',
       description: 'Focused on software engineering, algorithms, and web development.'

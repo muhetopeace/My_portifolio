@@ -44,19 +44,19 @@ export default function HomePage({ setActivePage }: HomePageProps) {
         </p>
         
         <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-          <button
-            onClick={() => setActivePage('portfolio')}
+          <a
+            href="#portfolio"
             className="bg-yellow-500 text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition transform hover:scale-105 flex items-center gap-2"
           >
             View My Work
             <ChevronRight className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => setActivePage('contact')}
+          </a>
+          <a
+            href="#contact"
             className="bg-transparent border-2 border-yellow-500 text-yellow-500 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-slate-900 transition transform hover:scale-105"
           >
             Get In Touch
-          </button>
+          </a>
         </div>
 
         <div className="flex items-center justify-center gap-6">

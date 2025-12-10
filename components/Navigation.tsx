@@ -47,15 +47,15 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
           <div className="hidden md:block">
             <div className="flex items-center space-x-6">
               {menuItems.map((item) => (
-                <button
+                <a
                   key={item.page}
-                  onClick={() => setActivePage(item.page)}
+                  href={`#${item.page}`}
                   className={`hover:text-yellow-500 transition text-sm font-medium ${
                     activePage === item.page ? 'text-yellow-500 font-semibold' : 'text-gray-600'
                   }`}
                 >
                   {item.name}
-                </button>
+                </a>
               ))}
               <a href="tel:+250790271423" className="flex items-center gap-2 text-sm hover:text-gray-800 transition text-gray-600">
                 <Phone className="w-4 h-4" />
@@ -76,18 +76,16 @@ export default function Navigation({ activePage, setActivePage }: NavigationProp
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {menuItems.map((item) => (
-              <button
+              <a
                 key={item.page}
-                onClick={() => {
-                  setActivePage(item.page)
-                  setMobileMenuOpen(false)
-                }}
+                href={`#${item.page}`}
+                onClick={() => setMobileMenuOpen(false)}
                 className={`block w-full text-left px-3 py-2 hover:bg-yellow-50 rounded transition ${
                   activePage === item.page ? 'text-yellow-500 bg-yellow-50 font-semibold' : 'text-gray-600'
                 }`}
               >
                 {item.name}
-              </button>
+              </a>
             ))}
           </div>
         </div>
