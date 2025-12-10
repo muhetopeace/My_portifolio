@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Download, Award, Users, Clock, Star } from 'lucide-react'
 
 export default function AboutPage() {
@@ -66,11 +67,9 @@ export default function AboutPage() {
 
           <div className="relative">
             <div className="aspect-[3/4] bg-slate-800 rounded-lg overflow-hidden shadow-2xl">
-              <img 
-                src="https://i.postimg.cc/FRfb4wYM/image.png"
-                alt="Peace Bamurange"
-                className="w-full h-full object-cover"
-              />
+              <div className="flex items-center justify-center h-full bg-gradient-to-br from-yellow-400 to-yellow-600">
+                <span className="text-slate-900 font-bold text-6xl">PB</span>
+              </div>
             </div>
           </div>
         </div>
